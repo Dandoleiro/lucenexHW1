@@ -1,28 +1,28 @@
     version 9.4.0
     min version 9.4.0
-    number of documents 6
+    number of documents 2
     uses compound file true
     diagnostics 8
-      key os.arch
-      value amd64
-      key os.version
-      value 10.0
       key lucene.version
       value 9.4.0
       key source
       value flush
       key timestamp
-      value 1669485777299
+      value 1669401074383
       key java.runtime.version
       value 15.0.2+7-27
       key java.vendor
       value Oracle Corporation
       key os
       value Windows 10
+      key os.arch
+      value amd64
+      key os.version
+      value 10.0
     attributes 0
     files 2
-      file _6.scf
-      file _6.si
-    id —ë	Æ5+»§02<o'L
+      file _5.scf
+      file _5.si
+    id “¦‡G¥~¹È'6‹RØ
     sort 0
-checksum 00000000002392073078
+checksum 00000000003323334322
