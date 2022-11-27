@@ -46,47 +46,47 @@ import org.apache.lucene.store.FSDirectory;
 
 
 public class HomeWork1{
-	
-	public static void main (String args[]) throws IOException, ParseException {
-		
+
+	public static void main (String args[]) throws IOException {
+
 		File folder = new File("FileTxt/");
-		
+
 		Path path = Paths.get("targetHW1/");
 		Directory directory = FSDirectory.open(path);	
-		
-		
+
+
 		CharArraySet stopWords = new CharArraySet(
 				Arrays.asList("di","a","da","in","con","su","per","tra","fra","dei","del","delle","della","che","cui","e","a","i","gli","il","la","o","alla","alle","allo","al","ai","ci"), true);
-		
-		
+
+
 		Analyzer a = CustomAnalyzer.builder()
-		.withTokenizer(WhitespaceTokenizerFactory.class)
-		.addTokenFilter(LowerCaseFilterFactory.class)
-		.addTokenFilter(WordDelimiterGraphFilterFactory.class)
-		.build();
-		
-		
+				.withTokenizer(WhitespaceTokenizerFactory.class)
+				.addTokenFilter(LowerCaseFilterFactory.class)
+				.addTokenFilter(WordDelimiterGraphFilterFactory.class)
+				.build();
+
+
 		Map<String, Analyzer> perFielAnalyzers = new HashMap<>();
 		perFielAnalyzers.put("Nome File", new WhitespaceAnalyzer());
 		perFielAnalyzers.put("Contenuto", new ItalianAnalyzer());
 		perFielAnalyzers.put("Contenuto", a);
 		perFielAnalyzers.put("Contenuto", new StandardAnalyzer(stopWords));
-		
-		
+
+
 		Analyzer analyzer = new PerFieldAnalyzerWrapper(new ItalianAnalyzer(), perFielAnalyzers);
-	
-		
+
+
 		IndexWriterConfig config = new IndexWriterConfig(analyzer);
 		config.setCodec(new SimpleTextCodec());
-		
-		
+
+
 		IndexWriter writer = new IndexWriter(directory,config);
 		writer.deleteAll();
-	
-		
-		
+
+
+
 		for(File f : findAllFilesInFolder(folder)) {
-		
+
 			String content = new String(Files.readAllBytes(Paths.get(f.getPath())), StandardCharsets.ISO_8859_1);
 			//System.out.println(f.getName().replace(".txt", ""));
 			//System.out.println(content);
@@ -96,65 +96,105 @@ public class HomeWork1{
 			d2.add(new TextField("Contenuto", content, Field.Store.YES));
 			writer.addDocument(d1);
 			writer.addDocument(d2);
-			
+
 		}
-		
+
 		writer.commit();
 
 		writer.close();
 
 		IndexReader indexReader = DirectoryReader.open(directory);
 		IndexSearcher searcher = new IndexSearcher(indexReader);
-		
-		
-		System.out.println("Benvenuto in Lucene, cosa vuoi cercare? Digita:");
-		System.out.println("Nome File -> per cercare il nome del File");
-		System.out.println("Contenuto -> per cercare il Contenuto dei file");
-		String search;
-		
-		Scanner scanIn = new Scanner(System.in);
-		search = scanIn.nextLine();
-		
-		scanIn.close();
-		
-		QueryParser queryParser = new QueryParser(search, new WhitespaceAnalyzer());
-		Query q = queryParser.parse("Il");
-		
-				
-				
-				
-				
-		//Query allDoc = new MatchAllDocsQuery();
-		
-		TopDocs hits = searcher.search(q, 10);
-        for (int i = 0; i < hits.scoreDocs.length; i++) {
-            ScoreDoc scoreDoc = hits.scoreDocs[i];
-            Document doc = searcher.doc(scoreDoc.doc);
-            System.out.println("doc"+scoreDoc.doc + ":"+ doc.get("titolo") + " (" + scoreDoc.score +")");
-            
-            Explanation explanation = searcher.explain(q, scoreDoc.doc);
-            System.out.println(explanation);
-            
-        }
 
-		
-		
-		
-	}
+		int esci = 0;
 
-public static ArrayList<File> findAllFilesInFolder(File folder) {
-	
-	ArrayList<File> files = new ArrayList<File>();
-	
-	for (File file : folder.listFiles()) {
-		if (!file.isDirectory()) {
-			files.add(file);
-		} else {
-			findAllFilesInFolder(file);
+		while ( esci == 0) {
+
+
+			System.out.println("Benvenuto in Lucene, cosa vuoi cercare? Digita:");
+			System.out.println("Nome File -> per cercare il nome del File");
+			System.out.println("Contenuto -> per cercare il Contenuto dei file");
+			System.out.println("Per  uscire digita 1");
+			String search;
+
+			Scanner scanIn = new Scanner(System.in);
+			search = scanIn.nextLine();
+
+			
+
+			if (search.equals("1")) { 
+				esci = 1;
+				System.out.println("Arrivederci!");
+			}
+			else {
+
+				if (!(search.equals("Nome File") ||search.equals("Contenuto")))
+					System.out.println("Errore nella scelta");
+
+				else {
+
+					System.out.println("Scrivi cosa vuoi cercare in: "+search);
+					String queryString;
+					Scanner query = new Scanner(System.in);
+					queryString = query.nextLine();
+
+					
+
+
+					QueryParser queryParser = new QueryParser(search, new StandardAnalyzer());
+					Query q = null;
+					try {
+						q = queryParser.parse(queryString);
+
+						TopDocs hits = searcher.search(q, 10);
+						for (int i = 0; i < hits.scoreDocs.length; i++) {
+							ScoreDoc scoreDoc = hits.scoreDocs[i];
+							Document doc = searcher.doc(scoreDoc.doc);
+							System.out.println("doc"+scoreDoc.doc + ":"+ doc.get(search) + " (" + scoreDoc.score +")");
+
+							Explanation explanation = searcher.explain(q, scoreDoc.doc);
+							System.out.println(explanation);
+
+						}
+
+					} catch (ParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+
+
+
+
+					//Query allDoc = new MatchAllDocsQuery();
+
+
+				}
+
+			}
+			
 		}
+		
+		
 	}
-	return files;
-}
+
+
+
+
+
+	public static ArrayList<File> findAllFilesInFolder(File folder) {
+
+		ArrayList<File> files = new ArrayList<File>();
+
+		for (File file : folder.listFiles()) {
+			if (!file.isDirectory()) {
+				files.add(file);
+			} else {
+				findAllFilesInFolder(file);
+			}
+		}
+		return files;
+	}
 }
 
 
