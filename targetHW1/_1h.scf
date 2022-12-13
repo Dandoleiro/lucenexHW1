@@ -1,37 +1,34 @@
-cfs entry for: _1a.fld
+cfs entry for: _1h.fld
 doc 0
   field 0
     name Nome File
     type string
     value Il fiammifero
-doc 1
   field 1
     name Contenuto
     type string
     value Il fiammifero è uno stelo o bastoncino di legno, cotone o carta cerata (cerino)[1] di cui una estremità, chiamata capocchia, è ricoperta di una sostanza infiammabile generalmente composta di solfuro di fosforo e di clorato di potassio solo per i fiammiferi accendibili ovunque che, sfregata su una superficie ruvida composta da vetro macinato intorno ai 3,0-3,2 decimi di millimetro e mescolati con una colla vinilica appositamente studiata allo scopo, si incendia alimentando una fiamma di breve durata. Il sostantivo "fiammifero" è composto dal sostantivo latino flamma (fiamma) e dal verbo f?ro (portare, produrre, generare) ovvero, letteralmente, "che produce fiamma".
-doc 2
+doc 1
   field 0
     name Nome File
     type string
     value Il pallone
-doc 3
   field 1
     name Contenuto
     type string
     value le palle più antiche mai esistite erano fatte di lino intrecciato e venivano usate in Egitto 4.500 anni fa. In Centro America la stessa invenzione è arrivata 800 anni dopo, e gli Aztechi ci giocavano ancora nel 1500: in questo caso parliamo però di palle di gomma
-doc 4
+doc 2
   field 0
     name Nome File
     type string
     value La serie di fibonacci
-doc 5
   field 1
     name Contenuto
     type string
     value Fibonacci, successione di successione di numeri naturali; prende il nome dal matematico pisano L. Fibonacci, che la introdusse nel suo Liber abaci, ed è indicata anche, sebbene impropriamente, come serie di Fibonacci. Fibonacci la introdusse per dare una descrizione regolare e numerica della crescita mensile di una popolazione di conigli, supponendo che essi diventino fertili al compimento del primo mese e ogni coppia di conigli partorisca al compimento del secondo mese. Così, i primi due termini della successione sono entrambi uguali a 1, mentre ciascun termine dal terzo in poi è uguale alla somma dei due che lo precedono. 
 END
-checksum 00000000002784377228
-cfs entry for: _1a.inf
+checksum 00000000001724881189
+cfs entry for: _1h.inf
 number of fields 2
   name Nome File
   number 0
@@ -66,693 +63,681 @@ number of fields 2
   vector similarity EUCLIDEAN
   soft-deletes false
 checksum 00000000002945559130
-cfs entry for: _1a.len
+cfs entry for: _1h.len
 field Nome File
   type NUMERIC
-  minvalue 0
+  minvalue 2
   pattern 0
+0
+T
+0
+T
 2
 T
-0
-F
-2
-T
-0
-F
-4
-T
-0
-F
 field Contenuto
   type NUMERIC
-  minvalue 0
+  minvalue 36
   pattern 00
-00
-F
-53
+17
 T
 00
-F
-36
 T
-00
-F
-52
+16
 T
 END
-checksum 00000000002321202149
-cfs entry for: _1a.pst
+checksum 00000000001457323367
+cfs entry for: _1h.pst
 field Contenuto
   term 1
-    doc 1
+    doc 0
       freq 1
       pos 14
-    doc 5
+    doc 2
       freq 1
       pos 82
   term 1500
-    doc 3
+    doc 1
       freq 1
       pos 37
   term 3,0
-    doc 1
+    doc 0
       freq 1
       pos 56
   term 3,2
-    doc 1
+    doc 0
       freq 1
       pos 57
   term 4.500
-    doc 3
+    doc 1
       freq 1
       pos 16
   term 800
-    doc 3
+    doc 1
       freq 1
       pos 27
   term abaci
-    doc 5
+    doc 2
       freq 1
       pos 21
   term accendibili
-    doc 1
+    doc 0
       freq 1
       pos 42
   term alimentando
-    doc 1
+    doc 0
       freq 1
       pos 73
   term america
-    doc 3
+    doc 1
       freq 1
       pos 21
   term anche
-    doc 5
+    doc 2
       freq 1
       pos 25
   term ancora
-    doc 3
+    doc 1
       freq 1
       pos 35
   term anni
-    doc 3
+    doc 1
       freq 2
       pos 17
       pos 28
   term antiche
-    doc 3
+    doc 1
       freq 1
       pos 3
   term appositamente
-    doc 1
+    doc 0
       freq 1
       pos 67
   term arrivata
-    doc 3
+    doc 1
       freq 1
       pos 26
   term aztechi
-    doc 3
+    doc 1
       freq 1
       pos 32
   term bastoncino
-    doc 1
+    doc 0
       freq 1
       pos 6
   term breve
-    doc 1
+    doc 0
       freq 1
       pos 77
   term capocchia
-    doc 1
+    doc 0
       freq 1
       pos 20
   term carta
-    doc 1
+    doc 0
       freq 1
       pos 11
   term caso
-    doc 3
+    doc 1
       freq 1
       pos 40
   term centro
-    doc 3
+    doc 1
       freq 1
       pos 20
   term cerata
-    doc 1
+    doc 0
       freq 1
       pos 12
   term cerino
-    doc 1
+    doc 0
       freq 1
       pos 13
   term chiamata
-    doc 1
+    doc 0
       freq 1
       pos 19
   term ciascun
-    doc 5
+    doc 2
       freq 1
       pos 84
   term clorato
-    doc 1
+    doc 0
       freq 1
       pos 35
   term colla
-    doc 1
+    doc 0
       freq 1
       pos 65
   term come
-    doc 5
+    doc 2
       freq 1
       pos 28
   term compimento
-    doc 5
+    doc 2
       freq 2
       pos 56
       pos 67
   term composta
-    doc 1
+    doc 0
       freq 2
       pos 28
       pos 50
   term composto
-    doc 1
+    doc 0
       freq 1
       pos 83
   term conigli
-    doc 5
+    doc 2
       freq 2
       pos 49
       pos 64
   term coppia
-    doc 5
+    doc 2
       freq 1
       pos 62
   term così
-    doc 5
+    doc 2
       freq 1
       pos 71
   term cotone
-    doc 1
+    doc 0
       freq 1
       pos 9
   term crescita
-    doc 5
+    doc 2
       freq 1
       pos 43
   term dal
-    doc 1
+    doc 0
       freq 2
       pos 84
       pos 90
-    doc 5
+    doc 2
       freq 2
       pos 10
       pos 86
   term dare
-    doc 5
+    doc 2
       freq 1
       pos 36
   term decimi
-    doc 1
+    doc 0
       freq 1
       pos 58
   term descrizione
-    doc 5
+    doc 2
       freq 1
       pos 38
   term diventino
-    doc 5
+    doc 2
       freq 1
       pos 53
   term dopo
-    doc 3
+    doc 1
       freq 1
       pos 29
   term due
-    doc 5
+    doc 2
       freq 2
       pos 74
       pos 95
   term durata
-    doc 1
+    doc 0
       freq 1
       pos 78
   term ed
-    doc 5
+    doc 2
       freq 1
       pos 22
   term egitto
-    doc 3
+    doc 1
       freq 1
       pos 15
   term entrambi
-    doc 5
+    doc 2
       freq 1
       pos 79
   term erano
-    doc 3
+    doc 1
       freq 1
       pos 6
   term esistite
-    doc 3
+    doc 1
       freq 1
       pos 5
   term essi
-    doc 5
+    doc 2
       freq 1
       pos 52
   term estremità
-    doc 1
+    doc 0
       freq 1
       pos 18
   term f
-    doc 1
+    doc 0
       freq 1
       pos 92
   term fa
-    doc 3
+    doc 1
       freq 1
       pos 18
   term fatte
-    doc 3
+    doc 1
       freq 1
       pos 7
   term fertili
-    doc 5
+    doc 2
       freq 1
       pos 54
   term fiamma
-    doc 1
+    doc 0
       freq 3
       pos 75
       pos 88
       pos 101
   term fiammiferi
-    doc 1
+    doc 0
       freq 1
       pos 41
   term fiammifero
-    doc 1
+    doc 0
       freq 2
       pos 1
       pos 81
   term fibonacci
-    doc 5
+    doc 2
       freq 4
       pos 0
       pos 14
       pos 31
       pos 32
   term flamma
-    doc 1
+    doc 0
       freq 1
       pos 87
   term fosforo
-    doc 1
+    doc 0
       freq 1
       pos 32
   term generalmente
-    doc 1
+    doc 0
       freq 1
       pos 27
   term generare
-    doc 1
+    doc 0
       freq 1
       pos 96
   term giocavano
-    doc 3
+    doc 1
       freq 1
       pos 34
   term gomma
-    doc 3
+    doc 1
       freq 1
       pos 46
   term impropriamente
-    doc 5
+    doc 2
       freq 1
       pos 27
   term incendia
-    doc 1
+    doc 0
       freq 1
       pos 72
   term indicata
-    doc 5
+    doc 2
       freq 1
       pos 24
   term infiammabile
-    doc 1
+    doc 0
       freq 1
       pos 26
   term intorno
-    doc 1
+    doc 0
       freq 1
       pos 54
   term intrecciato
-    doc 3
+    doc 1
       freq 1
       pos 10
   term introdusse
-    doc 5
+    doc 2
       freq 2
       pos 17
       pos 34
   term invenzione
-    doc 3
+    doc 1
       freq 1
       pos 24
   term l
-    doc 5
+    doc 2
       freq 1
       pos 13
   term latino
-    doc 1
+    doc 0
       freq 1
       pos 86
   term le
-    doc 3
+    doc 1
       freq 1
       pos 0
   term legno
-    doc 1
+    doc 0
       freq 1
       pos 8
   term letteralmente
-    doc 1
+    doc 0
       freq 1
       pos 98
   term liber
-    doc 5
+    doc 2
       freq 1
       pos 20
   term lino
-    doc 3
+    doc 1
       freq 1
       pos 9
   term lo
-    doc 5
+    doc 2
       freq 1
       pos 97
   term macinato
-    doc 1
+    doc 0
       freq 1
       pos 53
   term mai
-    doc 3
+    doc 1
       freq 1
       pos 4
   term matematico
-    doc 5
+    doc 2
       freq 1
       pos 11
   term mensile
-    doc 5
+    doc 2
       freq 1
       pos 44
   term mentre
-    doc 5
+    doc 2
       freq 1
       pos 83
   term mescolati
-    doc 1
+    doc 0
       freq 1
       pos 62
   term mese
-    doc 5
+    doc 2
       freq 2
       pos 59
       pos 70
   term millimetro
-    doc 1
+    doc 0
       freq 1
       pos 60
   term naturali
-    doc 5
+    doc 2
       freq 1
       pos 6
   term nel
-    doc 3
+    doc 1
       freq 1
       pos 36
-    doc 5
+    doc 2
       freq 1
       pos 18
   term nome
-    doc 5
+    doc 2
       freq 1
       pos 9
   term numeri
-    doc 5
+    doc 2
       freq 1
       pos 5
   term numerica
-    doc 5
+    doc 2
       freq 1
       pos 41
   term ogni
-    doc 5
+    doc 2
       freq 1
       pos 61
   term ovunque
-    doc 1
+    doc 0
       freq 1
       pos 43
   term ovvero
-    doc 1
+    doc 0
       freq 1
       pos 97
   term palle
-    doc 3
+    doc 1
       freq 2
       pos 1
       pos 44
   term parliamo
-    doc 3
+    doc 1
       freq 1
       pos 41
   term partorisca
-    doc 5
+    doc 2
       freq 1
       pos 65
   term però
-    doc 3
+    doc 1
       freq 1
       pos 42
   term pisano
-    doc 5
+    doc 2
       freq 1
       pos 12
   term più
-    doc 3
+    doc 1
       freq 1
       pos 2
   term poi
-    doc 5
+    doc 2
       freq 1
       pos 89
   term popolazione
-    doc 5
+    doc 2
       freq 1
       pos 47
   term portare
-    doc 1
+    doc 0
       freq 1
       pos 94
   term potassio
-    doc 1
+    doc 0
       freq 1
       pos 37
   term precedono
-    doc 5
+    doc 2
       freq 1
       pos 98
   term prende
-    doc 5
+    doc 2
       freq 1
       pos 7
   term primi
-    doc 5
+    doc 2
       freq 1
       pos 73
   term primo
-    doc 5
+    doc 2
       freq 1
       pos 58
   term produce
-    doc 1
+    doc 0
       freq 1
       pos 100
   term produrre
-    doc 1
+    doc 0
       freq 1
       pos 95
   term questo
-    doc 3
+    doc 1
       freq 1
       pos 39
   term regolare
-    doc 5
+    doc 2
       freq 1
       pos 39
   term ricoperta
-    doc 1
+    doc 0
       freq 1
       pos 22
   term ro
-    doc 1
+    doc 0
       freq 1
       pos 93
   term ruvida
-    doc 1
+    doc 0
       freq 1
       pos 49
   term scopo
-    doc 1
+    doc 0
       freq 1
       pos 70
   term sebbene
-    doc 5
+    doc 2
       freq 1
       pos 26
   term secondo
-    doc 5
+    doc 2
       freq 1
       pos 69
   term serie
-    doc 5
+    doc 2
       freq 1
       pos 29
   term sfregata
-    doc 1
+    doc 0
       freq 1
       pos 45
   term si
-    doc 1
+    doc 0
       freq 1
       pos 71
   term solfuro
-    doc 1
+    doc 0
       freq 1
       pos 30
   term solo
-    doc 1
+    doc 0
       freq 1
       pos 38
   term somma
-    doc 5
+    doc 2
       freq 1
       pos 93
   term sono
-    doc 5
+    doc 2
       freq 1
       pos 78
   term sostantivo
-    doc 1
+    doc 0
       freq 2
       pos 80
       pos 85
   term sostanza
-    doc 1
+    doc 0
       freq 1
       pos 25
   term stelo
-    doc 1
+    doc 0
       freq 1
       pos 4
   term stessa
-    doc 3
+    doc 1
       freq 1
       pos 23
   term studiata
-    doc 1
+    doc 0
       freq 1
       pos 68
   term successione
-    doc 5
+    doc 2
       freq 3
       pos 1
       pos 3
       pos 77
   term suo
-    doc 5
+    doc 2
       freq 1
       pos 19
   term superficie
-    doc 1
+    doc 0
       freq 1
       pos 48
   term supponendo
-    doc 5
+    doc 2
       freq 1
       pos 50
   term termine
-    doc 5
+    doc 2
       freq 1
       pos 85
   term termini
-    doc 5
+    doc 2
       freq 1
       pos 75
   term terzo
-    doc 5
+    doc 2
       freq 1
       pos 87
   term uguale
-    doc 5
+    doc 2
       freq 1
       pos 91
   term uguali
-    doc 5
+    doc 2
       freq 1
       pos 80
   term una
-    doc 1
+    doc 0
       freq 5
       pos 17
       pos 24
       pos 47
       pos 64
       pos 74
-    doc 5
+    doc 2
       freq 2
       pos 37
       pos 46
   term uno
-    doc 1
+    doc 0
       freq 1
       pos 3
   term usate
-    doc 3
+    doc 1
       freq 1
       pos 13
   term venivano
-    doc 3
+    doc 1
       freq 1
       pos 12
   term verbo
-    doc 1
+    doc 0
       freq 1
       pos 91
   term vetro
-    doc 1
+    doc 0
       freq 1
       pos 52
   term vinilica
-    doc 1
+    doc 0
       freq 1
       pos 66
   term è
-    doc 1
+    doc 0
       freq 3
       pos 2
       pos 21
       pos 82
-    doc 3
+    doc 1
       freq 1
       pos 25
-    doc 5
+    doc 2
       freq 2
       pos 23
       pos 90
@@ -761,15 +746,15 @@ field Nome File
     doc 0
       freq 1
       pos 0
-    doc 2
+    doc 1
       freq 1
       pos 0
   term La
-    doc 4
+    doc 2
       freq 1
       pos 0
   term di
-    doc 4
+    doc 2
       freq 1
       pos 2
   term fiammifero
@@ -777,30 +762,30 @@ field Nome File
       freq 1
       pos 1
   term fibonacci
-    doc 4
+    doc 2
       freq 1
       pos 3
   term pallone
-    doc 2
+    doc 1
       freq 1
       pos 1
   term serie
-    doc 4
+    doc 2
       freq 1
       pos 1
 END
-checksum 00000000000810982014
+checksum 00000000003579792040
 table of contents, size: 4
-  filename: _1a.fld
+  filename: _1h.fld
     start: 23
-    end: 2050
-  filename: _1a.inf
-    start: 2073
-    end: 2856
-  filename: _1a.len
-    start: 2879
-    end: 3080
-  filename: _1a.pst
-    start: 3103
-    end: 11759
-table of contents begins at offset: 0000000000000011759
+    end: 2032
+  filename: _1h.inf
+    start: 2055
+    end: 2838
+  filename: _1h.len
+    start: 2861
+    end: 3036
+  filename: _1h.pst
+    start: 3059
+    end: 11715
+table of contents begins at offset: 0000000000000011715

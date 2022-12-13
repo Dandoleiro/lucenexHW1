@@ -1,5 +1,6 @@
 package lucenex;
 
+import java.awt.List;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -22,7 +23,6 @@ import org.apache.lucene.analysis.it.ItalianAnalyzer;
 import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
 import org.apache.lucene.analysis.miscellaneous.WordDelimiterGraphFilterFactory;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.analysis.synonym.SynonymMap.Parser;
 import org.apache.lucene.codecs.simpletext.SimpleTextCodec;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -31,13 +31,14 @@ import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.Explanation;
 import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.MatchAllDocsQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -90,12 +91,12 @@ public class HomeWork1{
 			String content = new String(Files.readAllBytes(Paths.get(f.getPath())), StandardCharsets.ISO_8859_1);
 			//System.out.println(f.getName().replace(".txt", ""));
 			//System.out.println(content);
-			Document d1 = new Document();
-			Document d2 = new Document();
-			d1.add(new TextField("Nome File", f.getName().replace(".txt", ""), Field.Store.YES));
-			d2.add(new TextField("Contenuto", content, Field.Store.YES));
-			writer.addDocument(d1);
-			writer.addDocument(d2);
+			Document d = new Document();
+			
+			d.add(new TextField("Nome File", f.getName().replace(".txt", ""), Field.Store.YES));
+			d.add(new TextField("Contenuto", content, Field.Store.YES));
+			writer.addDocument(d);
+			
 
 		}
 
@@ -114,7 +115,7 @@ public class HomeWork1{
 			System.out.println("Benvenuto in Lucene, cosa vuoi cercare? Digita:");
 			System.out.println("Nome File -> per cercare il nome del File");
 			System.out.println("Contenuto -> per cercare il Contenuto dei file");
-			System.out.println("Per  uscire digita 1");
+			System.out.println("Per  uscire ed eseguire i test digita 1");
 			String search;
 
 			Scanner scanIn = new Scanner(System.in);
@@ -123,6 +124,40 @@ public class HomeWork1{
 			
 
 			if (search.equals("1")) { 
+				
+				
+				ArrayList<Query> allQueryTest = new ArrayList<Query>();
+				
+				allQueryTest.add(new TermQuery(new Term("Nome File", "pallone")));
+				allQueryTest.add(new TermQuery(new Term("Nome File", "Il")));
+				allQueryTest.add(new TermQuery(new Term("Nome File", "fibonacci")));
+				allQueryTest.add(new TermQuery(new Term("Nome File", "La serie di Fibonacci")));
+				allQueryTest.add(new TermQuery(new Term("Nome File", "Il fiammifero")));
+				allQueryTest.add(new TermQuery(new Term("Contenuto", "pallone")));
+				allQueryTest.add(new TermQuery(new Term("Contenuto", ",")));
+				allQueryTest.add(new TermQuery(new Term("Contenuto", "fa.")));
+				allQueryTest.add(new TermQuery(new Term("Contenuto", "è")));
+				
+				for(Query qtest : allQueryTest) {
+					TopDocs hits = searcher.search(qtest, 10);
+					
+					for (int i = 0; i < hits.scoreDocs.length; i++) {
+						ScoreDoc scoreDoc = hits.scoreDocs[i];
+						Document doc = searcher.doc(scoreDoc.doc);
+						System.out.println("doc"+scoreDoc.doc + ":"+ doc.get(search) + " (" + scoreDoc.score +")");
+
+						Explanation explanation = searcher.explain(qtest, scoreDoc.doc);
+						System.out.println(explanation);
+
+					}
+					
+				}
+				
+				
+				
+				
+				
+				
 				esci = 1;
 				System.out.println("Arrivederci!");
 			}

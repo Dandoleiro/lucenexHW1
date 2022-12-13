@@ -1,6 +1,6 @@
     version 9.4.0
     min version 9.4.0
-    number of documents 6
+    number of documents 3
     uses compound file true
     diagnostics 8
       key os
@@ -10,7 +10,7 @@
       key java.runtime.version
       value 15.0.2+7-27
       key timestamp
-      value 1669584635924
+      value 1670952558002
       key source
       value flush
       key lucene.version
@@ -21,8 +21,8 @@
       value amd64
     attributes 0
     files 2
-      file _1a.scf
-      file _1a.si
-    id oo˜cY˜:€*àýßó˜é
+      file _1h.si
+      file _1h.scf
+    id ˜JË@z¬Œ-CXÆuß
     sort 0
-checksum 00000000000512743248
+checksum 00000000002319150428
