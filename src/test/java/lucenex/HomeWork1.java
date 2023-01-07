@@ -68,8 +68,7 @@ public class HomeWork1{
 
 
 		Map<String, Analyzer> perFielAnalyzers = new HashMap<>();
-		perFielAnalyzers.put("Nome File", new WhitespaceAnalyzer());
-		perFielAnalyzers.put("Contenuto", new ItalianAnalyzer());
+		
 		perFielAnalyzers.put("Contenuto", a);
 		perFielAnalyzers.put("Contenuto", new StandardAnalyzer(stopWords));
 
@@ -152,10 +151,6 @@ public class HomeWork1{
 					}
 					
 				}
-				
-				
-				
-				
 				
 				
 				esci = 1;
